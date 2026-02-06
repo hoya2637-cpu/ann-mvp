@@ -1,8 +1,8 @@
-export default function APIPage() {
+export default function ApiPage() {
   return (
-    <div className="p-8 text-white min-h-screen">
-      <h1 className="text-3xl font-bold mb-8">API Documentation</h1>
-      <p className="text-gray-400">Coming soon...</p>
-    </div>
+    <main style={{ padding: "40px" }}>
+      <h1>ANN API</h1>
+      <p>Developer documentation and API access will be available here.</p>
+    </main>
   );
 }
