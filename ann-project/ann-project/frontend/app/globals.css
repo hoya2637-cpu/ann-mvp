@@ -152,3 +152,78 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
+
+.page {
+  padding: 80px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page h1 {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.page-desc {
+  color: var(--gray);
+  margin-bottom: 40px;
+}
+
+.section {
+  margin-bottom: 48px;
+}
+
+.news-card {
+  background: #0f253a;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.news-card.ai {
+  border: 1px solid var(--neon-green);
+}
+
+.tag {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.tag.neon {
+  color: var(--neon-green);
+}
+
+.chat-box {
+  background: #0f253a;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.chat-message {
+  margin-bottom: 16px;
+}
+
+.chat-message.ai strong {
+  color: var(--neon-green);
+}
+
+.chat-input {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  background: #132c42;
+  border: none;
+  color: white;
+}
+
+.chat-input button {
+  background: var(--neon-green);
+  border: none;
+  padding: 0 20px;
+  font-weight: bold;
+}
