@@ -37,7 +37,6 @@ export default function ChatPage() {
   );
 }
 
-
 const mockContext = {
   title: "Federal Reserve signals potential rate adjustment",
   score: 84,
