@@ -14,7 +14,7 @@ export default function Page() {
 
       <section className="hero">
         <h1>AI News Network</h1>
-        <p>Trust, Verified by ANN</p>
+        <p>Analyze news credibility through AI, research, and public discourse.</p>
 
         <div className="search-box">
           <input placeholder="Check a claim, headline, or URL..." />
