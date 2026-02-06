@@ -1,9 +1,4 @@
-import './globals.css';
-
-export const metadata = {
-  title: 'AI News Network',
-  description: 'Analyze news credibility through AI, research, and public discourse.',
-};
+import "./globals.css";
 
 export default function RootLayout({
   children,
@@ -12,7 +7,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header className="header">
+          <div className="logo">ANN</div>
+
+          <nav className="nav">
+            <a href="/">Fact Check</a>
+            <a href="/news">News</a>
+            <a href="/chat">Chat</a>
+            <a href="/api">API</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+
+        {children}
+
+        <footer className="footer">
+          © 2026 AI News Network
+        </footer>
+      </body>
     </html>
   );
 }
