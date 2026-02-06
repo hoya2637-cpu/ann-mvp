@@ -1,19 +1,36 @@
-import './globals.css'
-import type { Metadata } from 'next'
+import "./globals.css";
 
-export const metadata: Metadata = {
-  title: 'ANN - AI News Network',
-  description: 'Verify the Truth with AI-powered Fact Checking',
-}
+export const metadata = {
+  title: "AI News Network",
+  description: "Trust, Verified by ANN",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
-      <body>{children}</body>
+    <html lang="en">
+      <body>
+        <header className="header">
+          <div className="logo">ANN</div>
+
+          <nav className="nav">
+            <a href="/">Fact Check</a>
+            <a href="/news">News</a>
+            <a href="/chat">Chat</a>
+            <a href="/api">API</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+
+        <main>{children}</main>
+
+        <footer className="footer">
+          © {new Date().getFullYear()} AI News Network
+        </footer>
+      </body>
     </html>
-  )
+  );
 }
