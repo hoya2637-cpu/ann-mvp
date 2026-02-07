@@ -1,5 +1,6 @@
 "use client";
 
+import LoadingSteps from "./LoadingSteps";
 import { useState } from "react";
 import { checkFact } from "@/lib/api";
 
@@ -10,7 +11,7 @@ const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idl
   disabled={checkStatus === "loading"}
   className="bg-lime-400 text-black font-semibold px-6 py-3 rounded-lg hover:bg-lime-500 transition-all duration-200 hover:shadow-lg hover:shadow-lime-400/50 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
 >
-  {checkStatus === "loading" ? (
+  {checkStatus === "loading" && <LoadingSteps />}
     <span className="flex items-center gap-2">
       <svg className="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
@@ -23,12 +24,13 @@ const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idl
   )}
 </button>
 
-{checkStatus === "loading" && (
+{checkStatus === "loading" && <LoadingSteps />}
   <div className="mt-8 text-center text-gray-400">
     분석 중입니다...
     <div className="w-12 h-12 border-4 border-gray-700 border-t-lime-400 rounded-full animate-spin mx-auto mt-4"></div>
   </div>
 )}
+
 
 
 
