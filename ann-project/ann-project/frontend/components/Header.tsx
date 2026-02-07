@@ -1,26 +1,37 @@
 "use client";
-
-import Link from "next/link";
-import ThemeToggle from "./ThemeToggle";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrolled(window.scrollY > 20);
+    });
+  }, []);
+
   return (
-    <header className="fixed top-0 w-full bg-[#0B1220] border-b border-[#1F2937] z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <Link href="/" className="text-xl font-bold text-white">
-          ANN
-        </Link>
-
-        <nav className="flex gap-6 text-gray-300">
-          <Link href="/" className="hover:text-lime-400">Fact Check</Link>
-          <Link href="/news" className="hover:text-lime-400">News</Link>
-          <Link href="/chat" className="hover:text-lime-400">Chat</Link>
-          <Link href="/api" className="hover:text-lime-400">API</Link>
-          <Link href="/about" className="hover:text-lime-400">About</Link>
-        </nav>
-
-        <ThemeToggle />
-      </div>
+    <header className={scrolled ? "header blur" : "header"}>
+      <div className="logo">ANN</div>
+      <nav>
+        <a href="/">Fact Check</a>
+        <a href="/news">News</a>
+        <a href="/chat">Chat</a>
+        <a href="/api">API</a>
+        <a href="/about">About</a>
+      </nav>
     </header>
   );
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 40px;
+  transition: all 0.3s ease;
+}
+
+.header.blur {
+  backdrop-filter: blur(12px);
+  background: rgba(11,18,32,0.7);
 }
