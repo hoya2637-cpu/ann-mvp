@@ -38,22 +38,3 @@ export default function NewsPage() {
     </section>
   );
 }
-export default function NewsPage() {
-  return (
-    <section style={{ padding: "40px" }}>
-      <h1>News</h1>
-
-      <ul>
-        <li>
-          <a href="/news/1">Fed rate adjustment</a>
-        </li>
-        <li>
-          <a href="/news/renewable-energy">
-            Renewable energy expansion
-          </a>
-        </li>
-      </ul>
-    </section>
-  );
-}
-
