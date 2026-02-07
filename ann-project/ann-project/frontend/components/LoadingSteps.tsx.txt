@@ -1,0 +1,14 @@
+// components/LoadingSteps.tsx
+export default function LoadingSteps() {
+  return (
+    <div className="flex flex-col items-center gap-4">
+      <div className="w-16 h-16 border-4 border-gray-700 border-t-lime-400 rounded-full animate-spin"></div>
+      <p className="text-gray-400 font-medium">분석 중...</p>
+      <div className="text-sm text-gray-500 space-y-1 text-center">
+        <p>AI 모델 확인 중</p>
+        <p>전문가 의견 수집 중</p>
+        <p>커뮤니티 토론 분석 중</p>
+      </div>
+    </div>
+  );
+}
