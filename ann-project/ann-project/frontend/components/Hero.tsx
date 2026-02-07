@@ -1,3 +1,4 @@
+import Stat from "./Stat";
 export default function Hero() {
   return (
     <section className="hero">
@@ -23,3 +24,4 @@ export default function Hero() {
     </section>
   );
 }
+
