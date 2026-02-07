@@ -1,19 +1,20 @@
-export default function CredibilityScore({ score }: { score: number }) {
-  const color =
-    score > 70 ? "text-lime-400" :
-    score > 40 ? "text-yellow-400" :
-    "text-red-400";
-
-  const label =
-    score > 70 ? "High Credibility" :
-    score > 40 ? "Medium Credibility" :
-    "Low Credibility";
-
+export function CircularProgress({ value }: { value: number }) {
   return (
-    <div className="mt-8 p-6 bg-[#111827] rounded-lg border border-gray-700">
-      <p className="text-gray-400 text-sm mb-2">ANN Credibility Index</p>
-      <p className={`text-6xl font-bold ${color} mb-2`}>{score}</p>
-      <p className="text-gray-300 text-sm">{label}</p>
-    </div>
+    <svg width="120" height="120">
+      <circle cx="60" cy="60" r="54" stroke="#1f2937" strokeWidth="10" fill="none" />
+      <circle
+        cx="60"
+        cy="60"
+        r="54"
+        stroke="#a3e635"
+        strokeWidth="10"
+        fill="none"
+        strokeDasharray={339}
+        strokeDashoffset={339 - (339 * value) / 100}
+      />
+      <text x="50%" y="50%" textAnchor="middle" dy=".3em" fill="white">
+        {value}%
+      </text>
+    </svg>
   );
 }
