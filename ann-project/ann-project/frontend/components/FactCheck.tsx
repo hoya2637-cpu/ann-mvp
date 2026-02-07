@@ -1,13 +1,10 @@
 "use client";
 
 import { useState } from "react";
-// import LoadingSteps from "./LoadingSteps";   // ← 파일이 없으면 주석 처리하거나 실제 파일 생성 후 사용
-
-// ... (다른 import들)
+// import LoadingSteps from "./LoadingSteps";   //
 
 const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idle");
 
-// 버튼 + 로딩 UI 통합
 <button
   onClick={() => setCheckStatus("loading")}
   disabled={checkStatus === "loading"}
@@ -41,7 +38,6 @@ const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idl
   )}
 </button>
 
-// 버튼 밖에서 로딩 UI를 보여주고 싶다면 이렇게 (권장)
 {checkStatus === "loading" && (
   <div className="mt-8 text-center">
     {/* 방법 1: LoadingSteps 컴포넌트가 있다면 */}
@@ -59,3 +55,4 @@ const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idl
     </div>
   </div>
 )}
+
