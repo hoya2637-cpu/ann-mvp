@@ -1,3 +1,9 @@
+"use client";
+
+import { useState } from "react";
+
+import { checkFact } from "@/lib/api";
+
 const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idle");
 
 <button 
@@ -24,3 +30,4 @@ const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idl
     <LoadingSteps />
   </div>
 )}
+
