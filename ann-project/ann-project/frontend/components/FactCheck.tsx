@@ -1,10 +1,14 @@
 "use client";
 
 import { useState } from "react";
-// import LoadingSteps from "./LoadingSteps";   //
+// 다른 import들...
 
-const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idle");
+export default function FactCheck() {
+  // ← 여기! 이 줄이 반드시 있어야 함
+  const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idle");
 
+  return (
+    <>
 <button
   onClick={() => setCheckStatus("loading")}
   disabled={checkStatus === "loading"}
@@ -55,4 +59,5 @@ const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idl
     </div>
   </div>
 )}
+
 
