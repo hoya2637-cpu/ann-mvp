@@ -1,0 +1,43 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  background: #0b1220;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 120px;
+}
+
+.orb {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(120px);
+  animation: float 6s ease-in-out infinite;
+}
+
+.orb-1 {
+  background: #a3e635;
+  top: 20%;
+  left: 10%;
+}
+
+.orb-2 {
+  background: #22d3ee;
+  bottom: 10%;
+  right: 15%;
+}
+
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
