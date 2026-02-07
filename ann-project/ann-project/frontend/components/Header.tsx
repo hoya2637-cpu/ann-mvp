@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -14,11 +15,10 @@ export default function Header() {
     <header className={`header ${scrolled ? "blur" : ""}`}>
       <div className="logo">ANN</div>
       <nav className="nav">
-        <a href="/">Fact Check</a>
-        <a href="/news">News</a>
-        <a href="/chat">Chat</a>
-        <a href="/api">API</a>
-        <a href="/about">About</a>
+        <Link href="/">Fact Check</Link>
+        <Link href="/news">News</Link>
+        <Link href="/chat">Chat</Link>
+        <Link href="/about">About</Link>
       </nav>
     </header>
   );
