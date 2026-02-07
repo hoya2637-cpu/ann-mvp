@@ -6,7 +6,6 @@
   --muted: #94a3b8;
 }
 
-/* RESET */
 * {
   box-sizing: border-box;
 }
@@ -16,46 +15,36 @@ body {
   background: var(--bg-dark);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  overflow-x: hidden;
 }
 
-input:focus {
-  outline: none;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-button {
-  cursor: pointer;
-}
-
-/* ================= HEADER ================= */
-
+/* HEADER */
 .header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 100;
+  padding: 16px 48px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 16px 48px;
-  background: rgba(6, 20, 34, 0.95);
-  transition: all 0.3s ease;
+  background: rgba(6, 20, 34, 0.9);
 }
 
 .header.blur {
   backdrop-filter: blur(12px);
-  background: rgba(6, 20, 34, 0.75);
 }
 
 .logo {
-  font-size: 20px;
   font-weight: 700;
+  font-size: 20px;
 }
 
 .nav a {
   margin-left: 28px;
-  text-decoration: none;
   color: var(--muted);
-  padding-bottom: 4px;
 }
 
 .nav a:hover {
@@ -63,8 +52,7 @@ button {
   border-bottom: 2px solid var(--neon);
 }
 
-/* ================= HERO ================= */
-
+/* HERO */
 .hero {
   padding: 120px 24px;
   text-align: center;
@@ -72,17 +60,14 @@ button {
 
 .hero h1 {
   font-size: 52px;
-  margin-bottom: 16px;
 }
 
 .hero p {
   color: var(--muted);
-  margin-bottom: 40px;
-  font-size: 18px;
+  margin-bottom: 32px;
 }
 
-/* ================= SEARCH ================= */
-
+/* SEARCH */
 .search-box {
   display: flex;
   max-width: 720px;
@@ -98,7 +83,6 @@ button {
   border: none;
   background: transparent;
   color: white;
-  font-size: 16px;
 }
 
 .search-box button {
@@ -108,8 +92,7 @@ button {
   font-weight: bold;
 }
 
-/* ================= QUICK ACTIONS ================= */
-
+/* QUICK */
 .quick-actions {
   margin-top: 32px;
 }
@@ -123,79 +106,15 @@ button {
   color: white;
 }
 
-.quick-actions button:hover {
-  border-color: var(--neon);
-  color: var(--neon);
-}
-
-/* ================= RECENT ================= */
-
-.recent {
-  background: white;
-  color: #0f172a;
-  padding: 100px 40px;
-  text-align: center;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 48px;
-}
-
-.card {
-  background: #fff;
-  padding: 32px;
-  border-radius: 16px;
-  text-align: left;
-}
-
-.bar {
-  height: 8px;
-  background: #e5e7eb;
-  border-radius: 4px;
-  margin: 16px 0;
-}
-
-.bar span {
-  display: block;
-  height: 100%;
-  background: var(--neon);
-}
-
-/* ================= INFRA ================= */
-
-.infra {
-  background: var(--bg-deep);
-  padding: 120px 40px;
-  text-align: center;
-}
-
-/* ================= FOOTER ================= */
-
-.footer {
-  background: #040f1a;
-  padding: 80px 40px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-/* ================= COMMON PAGE ================= */
-
+/* PAGE */
 .page {
   padding: 120px 40px;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .page h1 {
   font-size: 40px;
-  margin-bottom: 12px;
 }
 
 .page-desc {
@@ -203,12 +122,7 @@ button {
   margin-bottom: 40px;
 }
 
-.section {
-  margin-bottom: 48px;
-}
-
-/* ================= NEWS ================= */
-
+/* NEWS */
 .news-card {
   background: #0f253a;
   padding: 20px;
@@ -220,22 +134,11 @@ button {
   border: 1px solid var(--neon);
 }
 
-.tag {
-  font-size: 12px;
-  color: var(--muted);
-}
-
-.tag.neon {
-  color: var(--neon);
-}
-
-/* ================= CHAT ================= */
-
+/* CHAT */
 .chat-box {
   background: #0f253a;
   padding: 24px;
   border-radius: 12px;
-  margin-bottom: 16px;
 }
 
 .chat-message {
@@ -246,22 +149,10 @@ button {
   color: var(--neon);
 }
 
-.chat-input {
-  display: flex;
-  gap: 8px;
-}
-
-.chat-input input {
-  flex: 1;
-  padding: 12px;
-  background: #132c42;
-  border: none;
-  color: white;
-}
-
-.chat-input button {
-  background: var(--neon);
-  border: none;
-  padding: 0 20px;
-  font-weight: bold;
+/* FOOTER */
+.footer {
+  padding: 80px 40px;
+  background: #040f1a;
+  text-align: center;
+  color: var(--muted);
 }
