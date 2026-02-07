@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
+import LoadingSteps from "./LoadingSteps";
 import { checkFact } from "@/lib/api";
 
 const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idle");
@@ -24,10 +24,11 @@ const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idl
   )}
 </button>
 
-{checkStatus === "loading" && (
+{checkStatus === "loading" && <LoadingSteps />}
   <div className="mt-8 text-center">
     {/* 로딩 스피너나 <LoadingSteps /> 컴포넌트 */}
     <LoadingSteps />
   </div>
 )}
+
 
