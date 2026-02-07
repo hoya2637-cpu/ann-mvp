@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import LoadingSteps from "./LoadingSteps";
 import { checkFact } from "@/lib/api";
 
 const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idle");
@@ -24,11 +23,12 @@ const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idl
   )}
 </button>
 
-{checkStatus === "loading" && <LoadingSteps />}
-  <div className="mt-8 text-center">
-    {/* 로딩 스피너나 <LoadingSteps /> 컴포넌트 */}
-    <LoadingSteps />
+{checkStatus === "loading" && (
+  <div className="mt-8 text-center text-gray-400">
+    분석 중입니다...
+    <div className="w-12 h-12 border-4 border-gray-700 border-t-lime-400 rounded-full animate-spin mx-auto mt-4"></div>
   </div>
 )}
+
 
 
