@@ -1,7 +1,10 @@
-const [status, setStatus] = useState<"idle"|"loading"|"done">("idle");
+const [checkStatus, setCheckStatus] = useState<"idle" | "loading" | "done">("idle");
 
-<button onClick={() => setStatus("loading")}>
+<button 
+  onClick={() => setCheckStatus("loading")}
+  disabled={checkStatus === "loading"}
+>
   Analyze
 </button>
 
-{status === "loading" && <LoadingSteps />}
+{checkStatus === "loading" && <LoadingSteps />}
